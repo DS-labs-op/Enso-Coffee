@@ -94,7 +94,7 @@ const Menu = () => {
             <Button variant="outline" asChild>
               <a href="/menu.pdf" target="_blank" rel="noopener noreferrer">
                 <FileText className="h-4 w-4" />
-                Download Full Menu (PDF)
+                View Full Menu (PDF)
               </a>
             </Button>
           </div>
