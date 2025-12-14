@@ -134,7 +134,7 @@ const Contact = () => {
                 {/* Phone */}
                 <a
                   href="tel:+918128955751"
-                  className="bg-card p-5 rounded-xl shadow-lg shadow-black/10 hover:shadow-xl transition-shadow group"
+                  className="bg-card p-5 rounded-xl shadow-lg shadow-black/10 hover:shadow-xl transition-shadow"
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
@@ -150,7 +150,7 @@ const Contact = () => {
                 {/* Email */}
                 <a
                   href="mailto:hello@enso.coffee"
-                  className="bg-card p-5 rounded-xl shadow-lg shadow-black/10 hover:shadow-xl transition-shadow group"
+                  className="bg-card p-5 rounded-xl shadow-lg shadow-black/10 hover:shadow-xl transition-shadow"
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
@@ -195,34 +195,35 @@ const Contact = () => {
                 </div>
               </div>
 
-{/* Social */}
-<div className="flex flex-wrap justify-center gap-4 mb-4">
-  <a
-    href="https://www.instagram.com/enso_coffee/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-2 bg-card px-4 py-3 rounded-lg shadow-lg shadow-black/10 hover:shadow-xl transition-all hover:-translate-y-0.5"
-  >
-    <Instagram className="h-5 w-5 text-accent" />
-    <span className="font-medium">@enso_coffee</span>
-  </a>
+              {/* Social */}
+              <div className="flex flex-wrap justify-center gap-4 mb-6">
+                <a
+                  href="https://www.instagram.com/enso_coffee/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-card px-4 py-3 rounded-lg shadow-lg shadow-black/10 hover:shadow-xl transition-all hover:-translate-y-0.5"
+                >
+                  <Instagram className="h-5 w-5 text-accent" />
+                  <span className="font-medium">@enso_coffee</span>
+                </a>
 
-  <a
-    href="https://www.facebook.com/ensocoffee"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-2 bg-card px-4 py-3 rounded-lg shadow-lg shadow-black/10 hover:shadow-xl transition-all hover:-translate-y-0.5"
-  >
-    <Facebook className="h-5 w-5 text-accent" />
-    <span className="font-medium">Facebook</span>
-  </a>
-</div>
+                <a
+                  href="https://www.facebook.com/ensocoffee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-card px-4 py-3 rounded-lg shadow-lg shadow-black/10 hover:shadow-xl transition-all hover:-translate-y-0.5"
+                >
+                  <Facebook className="h-5 w-5 text-accent" />
+                  <span className="font-medium">Facebook</span>
+                </a>
+              </div>
 
-
+              {/* Get Directions */}
               <a
                 href="https://maps.google.com/?q=Enso+Coffee+Katargam+Surat"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="block mt-2"
               >
                 <Button variant="outline" className="w-full">
                   <MapPin className="h-4 w-4" />
