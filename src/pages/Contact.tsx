@@ -24,7 +24,6 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
@@ -47,6 +46,7 @@ const Contact = () => {
       </Helmet>
 
       <Header />
+
       <main className="pt-20 md:pt-24 pb-16 md:pb-24 min-h-screen bg-background">
         <div className="container mx-auto px-4">
           {/* Hero */}
@@ -64,19 +64,18 @@ const Contact = () => {
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Contact Form */}
-            <div className="bg-card p-6 md:p-8 rounded-xl shadow-md">
+            <div className="bg-card p-6 md:p-8 rounded-xl shadow-lg shadow-black/10">
               <h2 className="font-serif text-2xl font-bold text-foreground mb-6">
                 Send Us a Message
               </h2>
+
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name *</Label>
                     <Input
                       id="name"
-                      type="text"
                       required
-                      placeholder="Your name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     />
@@ -85,9 +84,7 @@ const Contact = () => {
                     <Label htmlFor="phone">Phone *</Label>
                     <Input
                       id="phone"
-                      type="tel"
                       required
-                      placeholder="+91 98765 43210"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     />
@@ -98,8 +95,6 @@ const Contact = () => {
                   <Label htmlFor="email">Email</Label>
                   <Input
                     id="email"
-                    type="email"
-                    placeholder="your@email.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   />
@@ -120,7 +115,6 @@ const Contact = () => {
                   <Textarea
                     id="message"
                     required
-                    placeholder="How can we help you?"
                     rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -134,84 +128,90 @@ const Contact = () => {
               </form>
             </div>
 
-            {/* Contact Info & Map */}
-            <div className="space-y-8">
-              {/* Info Cards */}
+            {/* Contact Info */}
+            <div className="space-y-10">
               <div className="grid sm:grid-cols-2 gap-4">
+                {/* Phone */}
                 <a
                   href="tel:+918128955751"
-                  className="bg-card p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow group"
+                  className="bg-card p-5 rounded-xl shadow-lg shadow-black/10 hover:shadow-xl transition-shadow group"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
                       <Phone className="h-5 w-5 text-accent" />
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground uppercase tracking-wider">Phone</p>
-                      <p className="font-semibold text-foreground">+91 81289 55751</p>
+                      <p className="text-xs text-muted-foreground uppercase">Phone</p>
+                      <p className="font-semibold">+91 81289 55751</p>
                     </div>
                   </div>
                 </a>
 
+                {/* Email */}
                 <a
                   href="mailto:hello@enso.coffee"
-                  className="bg-card p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow group"
+                  className="bg-card p-5 rounded-xl shadow-lg shadow-black/10 hover:shadow-xl transition-shadow group"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
                       <Mail className="h-5 w-5 text-accent" />
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground uppercase tracking-wider">Email</p>
-                      <p className="font-semibold text-foreground">hello@enso.coffee</p>
+                      <p className="text-xs text-muted-foreground uppercase">Email</p>
+                      <p className="font-semibold">hello@enso.coffee</p>
                     </div>
                   </div>
                 </a>
 
-                <div className="bg-card p-5 rounded-xl shadow-md">
+                {/* Address */}
+                <div className="bg-card p-5 rounded-xl shadow-lg shadow-black/10 mt-2 md:mt-3">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
                       <MapPin className="h-5 w-5 text-accent" />
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground uppercase tracking-wider">Address</p>
-                      <p className="font-semibold text-foreground text-sm">
+                      <p className="text-xs text-muted-foreground uppercase">Address</p>
+                      <p className="font-semibold text-sm">
                         301, Sunday Hub, near Ankur School, Katargam, Surat 395004
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-card p-5 rounded-xl shadow-md">
+                {/* Hours */}
+                <div className="bg-card p-5 rounded-xl shadow-lg shadow-black/10">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
                       <Clock className="h-5 w-5 text-accent" />
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground uppercase tracking-wider">Hours</p>
-                      <p className="font-semibold text-foreground">Daily: 8:30 AM – 11:30 PM</p>
-                      <p className="text-xs text-muted-foreground italic">May vary; check Instagram</p>
+                      <p className="text-xs text-muted-foreground uppercase">Hours</p>
+                      <p className="font-semibold">Daily: 8:30 AM – 11:30 PM</p>
+                      <p className="text-xs text-muted-foreground italic">
+                        May vary; check Instagram
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Social Links */}
-              <div className="flex gap-4">
+              {/* Social */}
+              <div className="flex flex-wrap justify-center gap-4">
                 <a
                   href="https://www.instagram.com/enso_coffee/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-card px-4 py-3 rounded-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5"
+                  className="flex items-center gap-2 bg-card px-4 py-3 rounded-lg shadow-lg shadow-black/10 hover:shadow-xl transition-all hover:-translate-y-0.5"
                 >
                   <Instagram className="h-5 w-5 text-accent" />
                   <span className="font-medium">@enso_coffee</span>
                 </a>
+
                 <a
                   href="https://www.facebook.com/ensocoffee"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-card px-4 py-3 rounded-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5"
+                  className="flex items-center gap-2 bg-card px-4 py-3 rounded-lg shadow-lg shadow-black/10 hover:shadow-xl transition-all hover:-translate-y-0.5"
                 >
                   <Facebook className="h-5 w-5 text-accent" />
                   <span className="font-medium">Facebook</span>
@@ -232,6 +232,7 @@ const Contact = () => {
           </div>
         </div>
       </main>
+
       <Footer />
     </>
   );
