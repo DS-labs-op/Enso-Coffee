@@ -20,7 +20,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const phoneNumber = "918155033301";
+    const phoneNumber = "918155033301"; // Cafe WhatsApp number (no +, no spaces)
 
     const message = `
 Hello Enso Coffee 👋
@@ -34,8 +34,11 @@ Message:
 ${formData.message}
     `;
 
-    window.location.href =
+    const whatsappURL =
       "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+
+    // Redirect (reliable, not blocked)
+    window.location.href = whatsappURL;
   };
 
   return (
@@ -53,10 +56,7 @@ ${formData.message}
       <main className="pt-20 md:pt-24 pb-16 md:pb-24 min-h-screen bg-background">
         <div className="container mx-auto px-4">
           {/* Hero */}
-          <div
-            data-aos="fade-up"
-            className="text-center max-w-2xl mx-auto mb-12 md:mb-16 pt-8"
-          >
+          <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16 pt-8">
             <span className="text-accent font-medium text-sm uppercase tracking-wider">
               Contact Us
             </span>
@@ -68,17 +68,9 @@ ${formData.message}
             </p>
           </div>
 
-          <div
-            data-aos="fade-up"
-            data-aos-delay="40"
-            className="grid lg:grid-cols-2 gap-12 lg:gap-16"
-          >
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Contact Form */}
-            <div
-              data-aos="fade-right"
-              data-aos-delay="60"
-              className="bg-card p-6 md:p-8 rounded-xl shadow-lg shadow-black/10"
-            >
+            <div className="bg-card p-6 md:p-8 rounded-xl shadow-lg shadow-black/10">
               <h2 className="font-serif text-2xl font-bold mb-6">
                 Send Us a Message
               </h2>
@@ -157,11 +149,7 @@ ${formData.message}
             </div>
 
             {/* Contact Info */}
-            <div
-              data-aos="fade-left"
-              data-aos-delay="60"
-              className="space-y-10"
-            >
+            <div className="space-y-10">
               <div className="grid sm:grid-cols-2 gap-4">
                 <a
                   href="tel:+918155033301"
@@ -222,11 +210,7 @@ ${formData.message}
                 </div>
               </div>
 
-              <div
-                data-aos="fade-up"
-                data-aos-delay="80"
-                className="flex justify-center"
-              >
+              <div className="flex justify-center">
                 <a
                   href="https://www.instagram.com/enso_coffee/"
                   target="_blank"
@@ -238,18 +222,16 @@ ${formData.message}
                 </a>
               </div>
 
-              <div data-aos="fade-up" data-aos-delay="100">
-                <a
-                  href="https://maps.google.com/?q=Enso+Coffee+Katargam+Surat"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button variant="outline" className="w-full">
-                    <MapPin className="h-4 w-4" />
-                    Get Directions on Google Maps
-                  </Button>
-                </a>
-              </div>
+              <a
+                href="https://maps.google.com/?q=Enso+Coffee+Katargam+Surat"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" className="w-full">
+                  <MapPin className="h-4 w-4" />
+                  Get Directions on Google Maps
+                </Button>
+              </a>
             </div>
           </div>
         </div>

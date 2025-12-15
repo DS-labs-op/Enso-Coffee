@@ -22,8 +22,7 @@ const galleryImages = [
 ];
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] =
-    useState<typeof galleryImages[0] | null>(null);
+  const [selectedImage, setSelectedImage] = useState<typeof galleryImages[0] | null>(null);
 
   return (
     <>
@@ -36,14 +35,10 @@ const Gallery = () => {
       </Helmet>
 
       <Header />
-
       <main className="pt-20 md:pt-24 pb-16 md:pb-24 min-h-screen bg-background">
         <div className="container mx-auto px-4">
           {/* Hero */}
-          <div
-            data-aos="fade-up"
-            className="text-center max-w-2xl mx-auto mb-12 md:mb-16 pt-8"
-          >
+          <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16 pt-8">
             <span className="text-accent font-medium text-sm uppercase tracking-wider">
               Gallery
             </span>
@@ -51,32 +46,22 @@ const Gallery = () => {
               Our Space & Creations
             </h1>
             <p className="text-muted-foreground">
-              Take a visual tour of Enso Coffee—from our cozy interiors to our
+              Take a visual tour of Enso Coffee—from our cozy interiors to our 
               carefully crafted drinks and desserts.
             </p>
           </div>
 
           {/* Gallery Grid */}
-          <div
-            data-aos="fade-up"
-            data-aos-delay="40"
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
-          >
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {galleryImages.map((image, index) => (
               <button
                 key={index}
                 onClick={() => setSelectedImage(image)}
-                data-aos="zoom-in"
-                data-aos-delay={index * 20}
                 className={`relative overflow-hidden rounded-xl group cursor-pointer ${
                   index === 0 ? "col-span-2 row-span-2" : ""
                 }`}
               >
-                <div
-                  className={`aspect-square ${
-                    index === 0 ? "md:aspect-auto md:h-full" : ""
-                  }`}
-                >
+                <div className={`aspect-square ${index === 0 ? "md:aspect-auto md:h-full" : ""}`}>
                   <img
                     src={image.src}
                     alt={image.alt}
@@ -94,11 +79,7 @@ const Gallery = () => {
           </div>
 
           {/* Instagram CTA */}
-          <div
-            data-aos="fade-up"
-            data-aos-delay="60"
-            className="text-center mt-12"
-          >
+          <div className="text-center mt-12">
             <p className="text-muted-foreground mb-4">
               See more on our Instagram
             </p>
@@ -113,7 +94,7 @@ const Gallery = () => {
           </div>
         </div>
 
-        {/* Lightbox — intentionally NO AOS */}
+        {/* Lightbox */}
         {selectedImage && (
           <div
             className="fixed inset-0 z-50 bg-foreground/90 flex items-center justify-center p-4"
@@ -138,7 +119,6 @@ const Gallery = () => {
           </div>
         )}
       </main>
-
       <Footer />
     </>
   );
