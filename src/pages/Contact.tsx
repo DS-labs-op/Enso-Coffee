@@ -207,17 +207,6 @@ const Contact = () => {
                   <span className="font-medium">@enso_coffee</span>
                 </a>
 
-                <a
-                  href="https://www.facebook.com/ensocoffee"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-card px-4 py-3 rounded-lg shadow-lg shadow-black/10 hover:shadow-xl transition-all hover:-translate-y-0.5"
-                >
-                  <Facebook className="h-5 w-5 text-accent" />
-                  <span className="font-medium">Facebook</span>
-                </a>
-              </div>
-
               {/* Get Directions */}
               <a
                 href="https://maps.google.com/?q=Enso+Coffee+Katargam+Surat"
