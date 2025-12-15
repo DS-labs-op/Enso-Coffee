@@ -22,10 +22,10 @@ const queryClient = new QueryClient();
 const App = () => {
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 500,
       easing: "ease-out-cubic",
       once: true,
-      offset: 80,
+      offset: 60,
     });
   }, []);
 
