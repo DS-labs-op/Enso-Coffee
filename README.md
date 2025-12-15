@@ -12,7 +12,7 @@
 
 **A digital sanctuary for Katargam's premier specialty coffee house.** *Crafted brews. Cozy vibes. Modern code.*
 
-[**View Live Demo**](https://enso.coffee) · [**Report Bug**](https://github.com/ds-labs-op/enso-coffee/issues) · [**Request Feature**](https://github.com/ds-labs-op/enso-coffee/issues)
+[**View Live Demo**](https://ensocoffee.vercel.app/) · [**Report Bug**](https://github.com/ds-labs-op/enso-coffee/issues) · [**Request Feature**](https://github.com/ds-labs-op/enso-coffee/issues)
 
 </div>
 
