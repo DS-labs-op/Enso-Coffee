@@ -206,6 +206,7 @@ const Contact = () => {
                   <Instagram className="h-5 w-5 text-accent" />
                   <span className="font-medium">@enso_coffee</span>
                 </a>
+              </div>
 
               {/* Get Directions */}
               <a
