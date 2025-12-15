@@ -47,7 +47,7 @@ const Hero = () => {
                 View Menu
               </Button>
             </Link>
-            <a href="tel:+918128955751">
+            <a href="tel:+918155033301">
               <Button variant="hero-outline" size="xl" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                 <Phone className="h-5 w-5" />
                 Call For Booking
