@@ -37,40 +37,32 @@ const Index = () => {
         <title>Enso Coffee | Specialty Coffee & Café in Katargam, Surat</title>
         <meta
           name="description"
-          content="Enso Coffee — specialty coffee & cozy vibes in Katargam, Surat."
+          content="Enso Coffee — specialty coffee & cozy vibes in Katargam, Surat. Enjoy cold brews, espresso classics, desserts & more. Open daily 8:30 AM – 11:30 PM."
+        />
+        <meta
+          name="keywords"
+          content="Enso Coffee, specialty coffee Surat, café Katargam, cold brew, Vietnamese coffee, cheesecake, coffee shop Surat"
         />
         <link rel="canonical" href="https://enso.coffee" />
+        <meta property="og:title" content="Enso Coffee | Specialty Coffee in Katargam, Surat" />
+        <meta
+          property="og:description"
+          content="Crafted brews, seasonal desserts, and space to relax or work. Visit Enso Coffee in Katargam, Surat."
+        />
+        <meta property="og:type" content="restaurant.cafe" />
+        <meta property="og:url" content="https://enso.coffee" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
       <Header />
-
       <main>
-        <div data-aos="fade-up">
-          <Hero />
-        </div>
-
-        <div data-aos="fade-up" data-aos-delay="50">
-          <About />
-        </div>
-
-        <div data-aos="fade-up" data-aos-delay="80">
-          <FeaturedMenu />
-        </div>
-
-        <div data-aos="fade-up" data-aos-delay="110">
-          <Reviews />
-        </div>
-
-        <div data-aos="fade-up" data-aos-delay="140">
-          <Location />
-        </div>
-
-        <div data-aos="zoom-in" data-aos-delay="170">
-          <InstagramFeed />
-        </div>
+        <Hero />
+        <About />
+        <FeaturedMenu />
+        <Reviews />
+        <Location />
+        <InstagramFeed />
       </main>
-
       <Footer />
     </>
   );
