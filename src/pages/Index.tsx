@@ -55,14 +55,33 @@ const Index = () => {
       </Helmet>
 
       <Header />
+
       <main>
-        <Hero />
-        <About />
-        <FeaturedMenu />
-        <Reviews />
-        <Location />
-        <InstagramFeed />
+        <div data-aos="fade-up">
+          <Hero />
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100">
+          <About />
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="150">
+          <FeaturedMenu />
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200">
+          <Reviews />
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="250">
+          <Location />
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="300">
+          <InstagramFeed />
+        </div>
       </main>
+
       <Footer />
     </>
   );
