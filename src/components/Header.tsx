@@ -21,11 +21,17 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <span className="font-serif text-2xl md:text-3xl font-bold text-foreground">
-              Enso Coffee
-            </span>
-          </Link>
+          <Link to="/" className="flex items-center gap-3">
+  <img
+    src="Logo.png"
+    alt="Enso Coffee Logo"
+    className="h-8 w-8 md:h-10 md:w-10 object-contain"
+  />
+
+  <span className="font-serif text-2xl md:text-3xl font-bold text-foreground">
+    Enso Coffee
+  </span>
+</Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
