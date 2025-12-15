@@ -133,7 +133,7 @@ const Contact = () => {
               <div className="grid sm:grid-cols-2 gap-4">
                 {/* Phone */}
                 <a
-                  href="tel:+918128955751"
+                  href="tel:+918155033301"
                   className="bg-card p-5 rounded-xl shadow-lg shadow-black/10 hover:shadow-xl transition-shadow"
                 >
                   <div className="flex items-center gap-4">
@@ -142,7 +142,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-xs text-muted-foreground uppercase">Phone</p>
-                      <p className="font-semibold">+91 81289 55751</p>
+                      <p className="font-semibold">+91 8155033301</p>
                     </div>
                   </div>
                 </a>
