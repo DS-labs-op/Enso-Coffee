@@ -24,12 +24,38 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
 
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you soon. Thanks for reaching out!",
-    });
+  const phoneNumber = "918155033301"; // cafe WhatsApp number
+
+  const message = `
+Hello Enso Coffee 👋
+
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email || "Not provided"}
+Visit Date: ${formData.visitDate || "Not specified"}
+
+Message:
+${formData.message}
+  `;
+
+  const encodedMessage = encodeURIComponent(message);
+
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+  window.open(whatsappURL, "_blank");
+
+  setFormData({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+    visitDate: "",
+  });
+};
+
 
     setFormData({ name: "", phone: "", email: "", message: "", visitDate: "" });
     setIsSubmitting(false);
