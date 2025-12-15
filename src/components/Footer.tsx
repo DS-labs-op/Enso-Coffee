@@ -50,9 +50,9 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold text-lg">Contact</h4>
             <div className="space-y-3">
-              <a href="tel:+918128955751" className="flex items-start gap-3 text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
+              <a href="tel:+918155033301" className="flex items-start gap-3 text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
                 <Phone className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>+91 81289 55751</span>
+                <span>+91 8155033301</span>
               </a>
               <a href="mailto:hello@enso.coffee" className="flex items-start gap-3 text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
                 <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
