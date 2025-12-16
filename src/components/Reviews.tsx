@@ -2,22 +2,22 @@ import { Star, Quote } from "lucide-react";
 
 const reviews = [
   {
-    name: "Priya S.",
+    name: "Jenish G.",
     rating: 5,
-    text: "Best cold brew in Surat! The Cold Brew Barrel is absolutely divine. The ambiance is perfect for working or catching up with friends.",
+    text: "I found the perfect place for coffee lovers where every sip feels deliciously fresh and indulgent. The specialty beans with unique aromas truly stand out, making each cup memorable, especially when you just want to unwind or catch up with friends.",
     date: "2 weeks ago",
   },
   {
-    name: "Rahul M.",
+    name: "Milan M.",
     rating: 5,
-    text: "The Vietnamese coffee is authentic and the cheesecake is heavenly. Staff is super friendly and the place has great vibes.",
-    date: "1 month ago",
+    text: "Must visit cafe for core coffee lovers. One of the top 10 cafe for coffee in surat. Coffee/Cheesecake/Ambience is 10 out of 10.",
+    date: "5 month ago",
   },
   {
-    name: "Ananya P.",
+    name: "Priyen N.",
     rating: 5,
-    text: "Finally a specialty coffee place in Katargam! The affogato is a must-try. Love the cozy interior and the attention to detail.",
-    date: "3 weeks ago",
+    text: "The espresso here gives a strong caffeine kick, yet so refreshing. Loved every bite perfect with a variety of beverages and shakes. Great service and atmosphere at Enso Coffee. Barista ashraf 🫀",
+    date: "2 month ago",
   },
 ];
 
